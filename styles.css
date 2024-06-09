@@ -45,6 +45,12 @@ body {
     font-size: 300%;
 }
 
+@media (max-width: 1250px) {
+    #header {
+        margin-top: -600px;
+    }
+}
+
 /* Navigation */
 
 #nav{
@@ -71,6 +77,12 @@ body {
     color: white;
 }
 
+@media (max-width: 1250px) {
+    #nav {
+        margin-top: -500px;
+    }
+}
+
 /* Content */
 
 #con {
@@ -84,6 +96,14 @@ body {
 #con img {
     float: left;
     margin: 0px 45px 45px 0px;
+}
+
+@media (max-width: 1250px) {
+    #con {
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+        margin-top: 600px;
+    }
 }
   
 /* Side bar */
@@ -118,7 +138,7 @@ body {
 
 @media (max-width: 1250px) {
     #side {
-        margin: 0 60% 0 40%;
+        margin: -400px 60% 0 40%;
     }
 }
 
