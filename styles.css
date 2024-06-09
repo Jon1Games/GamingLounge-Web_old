@@ -2,9 +2,12 @@ body {
     margin: 0;
     border: 0;
     padding: 0;
+    box-sizing: border-box;
     background-attachment: fixed;
     background-size: cover;
 }
+
+
 
 .block {
     padding: 10px;
@@ -23,7 +26,7 @@ body {
     font-size: 130%;
 }
 
-
+/* Header */
 
 #header {
     margin-top: -200px;
@@ -42,7 +45,7 @@ body {
     font-size: 300%;
 }
 
-
+/* Navigation */
 
 #nav{
     margin-top: -100px;
@@ -54,7 +57,8 @@ body {
     padding-left: 30px;
     position: fixed;
 }
-#nav a{
+#nav a,
+#nav p{
     font-size: 150%;
     margin: 12px;
     margin-right: 75px;
@@ -62,11 +66,12 @@ body {
     color: black;
 }
 
-#nav a:hover, #nav .active{
+#nav a:hover,
+#nav .active{
     color: white;
 }
 
-
+/* Content */
 
 #con {
     margin-left: 7.5%;
@@ -81,12 +86,12 @@ body {
     margin: 0px 45px 45px 0px;
 }
   
-
+/* Side bar */
 
 #side {
     margin-left:80%;
     position: fixed;
-    width: 15%;
+    width: auto;
 }
 #side div{
     padding: 10px;
@@ -111,7 +116,13 @@ body {
     margin-top: 15px;
 }
 
+@media (max-width: 1250px) {
+    #side {
+        margin: 0 60% 0 40%;
+    }
+}
 
+/* Dark/light theme */
 
 @media (prefers-color-scheme: dark) {
     body {
@@ -147,3 +158,80 @@ body {
         color: black;
     }
 }
+
+
+/* Mobile Nav */
+
+.menu {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+    width: 100%;
+}
+
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #0088a9;
+}
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #nav a,
+    .cta {
+        display: none;
+    }
+    .menu {
+        display: initial;
+    }
+}
+
+/* Next */
+  

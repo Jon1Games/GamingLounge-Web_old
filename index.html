@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<body>
+<html>
   <head>
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="header">
-      <h1>Gaming Lounge Netzwerk</h1>
+      <h1><span style="color: #ff0000; ">G</span><span style="color: #ff1100">a</span><span style="color: #ff2200">m</span><span style="color: #ff3300">i</span><span style="color: #ff4400">n</span><span style="color:#ff5500">g</span> <span style="color: #ff6600">L</span><span style="color: #ff7700">o</span><span style="color: #ff8800">u</span><span style="color: #ff9900">n</span><span style="color: #ffaa00">g</span><span style="color: #ffbb00">e</span> <span style="color: #ffcc00">N</span><span style="color: #ffdd00">e</span><span style="color: #ffee00">t</span><span style="color: #ffff00">z</span><span style="color: #ffee00">w</span><span style="color: #ffdd00">e</span><span style="color: #ffcc00">r</span><span style="color: #ffbb00">k</span></h1>
     </div>
     <div id="nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="team.html">Team</a>
+      <a class="cta active" href="index.html">Home</a>
+      <p class="menu cta">Menu</p>
+      <a>Team</a>
       <a>Minecraft Endless</a>
       <a>Impressum</a>
+    </div>
+    <div id="mobile__menu" class="overlay">
+      <a class="close">&times;</a>
+      <div class="overlay__content">
+        <a href="index.html" class="active">Home</a>
+        <a>Team</a>
+        <a>Minecraft Endless</a>
+        <a>Impressum</a>
+      </div>
     </div>
     <div id="side">
       <div>
@@ -24,7 +34,10 @@
       </div>
     </div>
     <div id="con">
-        <!-- Content -->
+        <!-- Content start-->
+
+        <!-- Content ende-->
     </div>
   </body>
-</body>
+  <script type="text/javascript" src="scripts/mobile.js"></script>
+</html>
